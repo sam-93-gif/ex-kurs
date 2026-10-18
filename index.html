@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tassen – Hunddagis och hundpensionat</title>
+
+    <link rel="stylesheet" href="style.css">
+     
+   
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <h1>Tassen 🐾</h1>
+
+            <nav aria-label="Huvudmeny">
+                <a href="#hem">Hem</a>
+                <a href="#tjanster">Våra tjänster</a>
+                <a href="#oppettider">Öppettider</a>
+                <a href="#bokning">Bokning</a>
+                <a href="#omdomen">Omdömen</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <p class="welcome-text">Välkommen till Tassen</p>
+
+                <h2>En gladare vardag för din hund</h2>
+
+                <p>
+                    Vi erbjuder hunddagis och hundpensionat där din hund
+                    får omsorg, motion och sällskap. Hos oss får hundarna
+                    möjlighet att leka, vila och upptäcka nya saker i en
+                    trygg miljö.
+                </p>
+
+                <a href="#bokning" class="button">
+                    Skicka en bokningsförfrågan
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="bilder/hund.jpg"
+                    alt="Hund som leker utomhus">
+            </div>
+        </section>
+
+        <section class="container about" id="om-oss">
+            <h2>Om Tassen</h2>
+
+            <p>
+                På Tassen vill vi att varje hund ska känna sig trygg
+                och välkommen. Vi planerar aktiviteter som passar
+                hundarnas behov och ger dem tid för både lek och vila.
+                Vårt mål är att göra dagen trevlig för hundarna och
+                enklare för deras ägare.
+            </p>
+        </section>
+
+        <section class="container" id="tjanster">
+            <h2 class="section-title">Våra tjänster</h2>
+
+            <div class="service-grid">
+
+                <article class="service-card">
+                    <h3>Hunddagis heldag</h3>
+
+                    <p>
+                        En hel dag med lek, promenader, sällskap
+                        och vila.
+                    </p>
+
+                    <p class="price">350 kr per dag</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Hunddagis halvdag</h3>
+
+                    <p>
+                        Passar hundar som behöver tillsyn och
+                        aktivitet under en kortare dag.
+                    </p>
+
+                    <p class="price">210 kr per halvdag</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Hundpensionat</h3>
+
+                    <p>
+                        Vi tar hand om din hund när du är bortrest,
+                        med tid för både aktivitet och vila.
+                    </p>
+
+                    <p class="price">480 kr per natt</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Extra promenad</h3>
+
+                    <p>
+                        En extra promenad för hundar som behöver
+                        mer rörelse under dagen.
+                    </p>
+
+                    <p class="price">100 kr per promenad</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="container" id="oppettider">
+            <div class="opening-card">
+                <h2>Öppettider</h2>
+
+                <div class="hours-list">
+                    <p>
+                        <span>Måndag–fredag</span>
+                        <strong>07.00–18.00</strong>
+                    </p>
+
+                    <p>
+                        <span>Lördag</span>
+                        <strong>09.00–14.00</strong>
+                    </p>
+
+                    <p>
+                        <span>Söndag</span>
+                        <strong>Stängt</strong>
+                    </p>
+                </div>
+
+                <div class="clock-card">
+                    <h3>Aktuell tid</h3>
+
+                    <p id="clock" class="clock">00:00:00</p>
+
+                    <p id="date" class="date"></p>
+
+                    <p
+                        id="open-status"
+                        class="status"
+                        aria-live="polite">
+
+                        Kontrollerar öppettider ...
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="bokning">
+            <div class="booking-card">
+                <h2>Skicka en bokningsförfrågan</h2>
+
+                <p>
+                    Fyll i uppgifterna nedan för att lägga till
+                    en bokningsförfrågan.
+                </p>
+
+                <p class="information">
+                    Förfrågningarna sparas i din webbläsare.
+                    De skickas inte automatiskt till Tassen.
+                    Kontakta oss för att få din bokning bekräftad.
+                </p>
+
+                <form id="booking-form">
+
+                    <div class="form-group">
+                        <label for="dog-name">Hundens namn</label>
+
+                        <input
+                            type="text"
+                            id="dog-name"
+                            placeholder="Skriv hundens namn"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="owner-name">Ditt namn</label>
+
+                        <input
+                            type="text"
+                            id="owner-name"
+                            placeholder="Skriv ditt namn"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-date">Önskat datum</label>
+
+                        <input
+                            type="date"
+                            id="booking-date"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Välj tjänst</label>
+
+                        <select id="service" required>
+                            <option value="">Välj en tjänst</option>
+                            <option value="Hunddagis heldag">
+                                Hunddagis heldag
+                            </option>
+                            <option value="Hunddagis halvdag">
+                                Hunddagis halvdag
+                            </option>
+                            <option value="Hundpensionat">
+                                Hundpensionat
+                            </option>
+                            <option value="Extra promenad">
+                                Extra promenad
+                            </option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button">
+                        Lägg till förfrågan
+                    </button>
+
+                    <p
+                        id="booking-message"
+                        class="message"
+                        aria-live="polite">
+                </p>
+                </form>
+
+                <div class="booking-results">
+                    <h3>Mina bokningsförfrågningar</h3>
+
+                    <div id="booking-items"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="omdomen">
+            <div class="review-card">
+                <h2>Vad våra kunder säger</h2>
+
+                <p id="review-text" class="review-text">
+                    "Min hund trivs väldigt bra och kommer alltid
+                    hem glad efter en dag hos Tassen."
+                </p>
+
+                <p id="review-author" class="review-author">
+                    – Emma
+                </p>
+
+                <button
+                    type="button"
+                    id="next-review"
+                    class="button">
+                    Visa ett annat omdöme
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="kontakt">
+        <div class="footer-content">
+            <h2>Kontakta Tassen</h2>
+
+            <p>Adress: Hundvägen 12, Exempelstad</p>
+
+            <p>Telefon: 070-123 45 67</p>
+
+            <p>E-post: kontakt@example.com</p>
+
+            <p class="copyright">
+                © 2026 Tassen. Alla rättigheter förbehållna.
+            </p>
+           
+        </div>
+    </footer>
+<script src="app.js" defer></script>
+</body>
+</html>
